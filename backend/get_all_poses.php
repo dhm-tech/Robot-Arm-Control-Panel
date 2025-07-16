@@ -15,9 +15,10 @@ echo "<table>
             <th>Action</th>
         </tr>";
 
+$index = 1;
 while ($row = $result->fetch_assoc()) {
     echo "<tr>
-            <td>{$row['id']}</td>
+        <td>" . $index++ . "</td>
             <td>{$row['motor1']}</td>
             <td>{$row['motor2']}</td>
             <td>{$row['motor3']}</td>
