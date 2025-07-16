@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robot Arm Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Robot Arm Control Panel</h1>
+
+    <div class="slider-container">
+        <div id="sliders"></div>
+        <br>
+        <button onclick="resetSliders()">Reset</button>
+        <button onclick="savePose()">Save Pose</button>
+        <button onclick="runPose()">Run</button>
+    </div>
+
+    <hr>
+
+    <h2>Saved Poses</h2>
+    <div id="posesTable"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // الآن نولّد السلايدرز بعد تحميل الصفحة
+        window.onload = function () {
+            const slidersDiv = document.getElementById("sliders");
+            for (let i = 1; i <= 6; i++) {
+                slidersDiv.innerHTML += `
+                    <label>Motor ${i}:
+                        <input type="range" min="0" max="180" value="90" id="motor${i}" oninput="updateValue(${i})">
+                        <span id="value${i}">90</span>
+                    </label><br>
+                `;
+            }
+            loadTable(); // تحميل الجدول بعد تحميل السلايدرز
+        };
+    </script>
+</body>
+</html>
