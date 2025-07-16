@@ -87,7 +87,7 @@ http://localhost/robot-arm-controller/public/index.html
 
 ## 📸 Project Preview
 
-![Preview](Project-Preview.png)
+https://github.com/user-attachments/assets/7c09753b-782e-4afc-8d8a-f0b114bc4132
 
 ---
 
